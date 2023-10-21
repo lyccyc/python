@@ -2,6 +2,8 @@ def black_hole_number(num: int):
     answer = []
     answer.append(num)
     while num != 0 or num != 6174:
+        if num == 6174:
+            return answer
         a = []
         max = 0
         min = 0
@@ -20,9 +22,9 @@ def black_hole_number(num: int):
         num = ans
 
         if num == 6174:
-            print(answer)
+            return answer
             break
 
 
 if __name__ == "__main__":
-    print(black_hole_number(1234))  # <-- return 到這邊！
+    print(black_hole_number(6174))  # <-- return 到這邊！
