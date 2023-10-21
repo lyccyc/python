@@ -27,4 +27,4 @@ def black_hole_number(num: int):
 
 
 if __name__ == "__main__":
-    print(black_hole_number(6174))  # <-- return 到這邊！
+    print(black_hole_number(1234))  # <-- return 到這邊！
