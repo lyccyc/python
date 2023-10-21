@@ -19,9 +19,10 @@ def black_hole_number(num: int):
         answer.append(ans)
         num = ans
 
-        if num == 0 or num == 6174:
+        if num == 6174:
             print(answer)
             break
 
 
-black_hole_number(45)
+if __name__ == "__main__":
+    print(black_hole_number(1234))  # <-- return 到這邊！
