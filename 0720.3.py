@@ -1,5 +1,10 @@
 def is_spellable_by_ptable(in_str, p_table):
-    pass
+    in_str = set(in_str)
+    p_table = set(p_table)
+    if len(in_str & p_table) > 0:
+        return True
+    else:
+        return False
 
 
 if __name__ == "__main__":
