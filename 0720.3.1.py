@@ -1,9 +1,12 @@
 def is_spellable_by_ptable(in_str, p_table: str):
-    for i in in_str:
-        if i in p_table:
-            return True
-        else:
-            return False
+    dp = [in_str[0] in p_table]
+    dp.append((dp[0] and in_str[1] in p_table) or in_str[:2] in p_table)
+    for i in range(2, len(in_str)):
+        dp.append(
+            (dp[i - 1] and in_str[i] in p_table)
+            or (dp[i - 2] and in_str[i - 1 : i + 1] in p_table)
+        )
+    return dp[i]
 
 
 if __name__ == "__main__":
@@ -130,4 +133,5 @@ if __name__ == "__main__":
     # p_table = ['f','te','ar','t','r']
     p_table = [e.lower() for e in p_table]
     print(is_spellable_by_ptable("practice", p_table))
-    print(is_spellable_by_ptable("math", p_table))
+    print(is_spellable_by_ptable("mgcl", p_table))
+    print(is_spellable_by_ptable("pract", p_table))
