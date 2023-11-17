@@ -30,4 +30,4 @@ if __name__ == "__main__":
     p_table = ["y", "es", "yb", "se", "s", "mg", "ti", "mn", "mt", "as"]
     p_table = [e.lower() for e in p_table]
     print(is_spellable_by_ptable("yes", p_table))
-    # print(is_spellable_by_ptable("math", p_table))
+    print(is_spellable_by_ptable("math", p_table))
