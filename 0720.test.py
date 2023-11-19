@@ -1,7 +1,7 @@
 def is_spellable_by_ptable(in_str, p_table):
     if in_str[0] in p_table:
         if len(in_str) == 1:
-            print(in_str[0])
+            return in_str
         else:
             a = list(in_str)
             u = a.pop(0)
@@ -12,7 +12,7 @@ def is_spellable_by_ptable(in_str, p_table):
             in_str = "".join(a)
     if in_str[:2] in p_table:
         if len(in_str) == 2:
-            print(in_str[:2])
+            return in_str
         else:
             a = list(in_str)
             u = a.pop(0)
@@ -23,7 +23,7 @@ def is_spellable_by_ptable(in_str, p_table):
             a.insert(0, v)
             a.insert(0, u)
             in_str = "".join(a)
-    print("[]")
+    return []
 
 
 if __name__ == "__main__":
